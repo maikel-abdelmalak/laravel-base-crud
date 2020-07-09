@@ -3,11 +3,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item {{Request::Route()->GetName()=='home'?'active':''}}">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item {{Request::route()->getName()=='home'?'active':''}}">
+        <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item {{strpos(Request::route()->getName(),'students') !== false ? 'active' : ''}}">
-        <a class="nav-link" href="#">Students</a>
+        <a class="nav-link" href="{{route('students.index')}}">Students</a>
       </li>
 
     </ul>

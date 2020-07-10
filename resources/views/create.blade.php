@@ -6,6 +6,15 @@
 
 @section('body')
     <div class="container">
+        @if ($errors->any())
+            <div class="alert">
+                <ul>
+                    @foreach ($errors->all() as $errore)
+                        <li>{{$errore}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <h1>Inserisci un nuovo studente</h1>
         <form action="{{route('students.store')}}" method="post">
             @csrf

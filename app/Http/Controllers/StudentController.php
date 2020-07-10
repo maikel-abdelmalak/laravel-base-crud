@@ -37,7 +37,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -49,7 +49,13 @@ class StudentController extends Controller
     public function show($id)
     {
         $studente = Student::find($id);
-        return view('show', compact('studente'));
+        if($studente){
+            return view('show', compact('studente'));
+        }else{
+            abort(404);
+ 
+        }
+
     }
 
     /**

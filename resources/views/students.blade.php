@@ -23,7 +23,7 @@
                          <th scope="col">Nome</th>
                          <th scope="col">Cognome</th>
                          <th scope="col">Mail</th>
-                         <th scope="col">Azioni</th>
+                         <th scope="col" class="text-center">Azioni</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -34,7 +34,7 @@
                            <td>{{$studente->lastname}}</td>
                            <td>{{$studente->mail}}</td>
                            <td class="text-right">
-                              <a class="btn btn-sm btn-info" href="{{route('students.create')}}">Dettagli</a>
+                              <a class="btn btn-sm btn-info" href="{{route('students.show', [$studente->id])}}">Dettagli</a>
                               <a class="btn btn-sm btn-warning" href="{{route('students.create')}}">Modifica</a>
                               <a class="btn btn-sm btn-danger" href="{{route('students.create')}}">Elimina</a>
                            </td>

@@ -36,7 +36,11 @@
                            <td class="text-right">
                               <a class="btn btn-sm btn-info" href="{{route('students.show', [$studente->id])}}">Dettagli</a>
                               <a class="btn btn-sm btn-warning" href="{{route('students.edit',[$studente->id])}}">Modifica</a>
-                              {{-- <a class="btn btn-sm btn-danger" href="{{route('students.edit',[$studente->id])}}">Elimina</a> --}}
+                             <form class="d-inline" action="{{route('students.destroy', [$studente->id])}}" method="post">
+                                 @method('DELETE')
+                                 @csrf
+                                  <input type="submit" value="Elimina"class="btn btn-sm btn-danger" href="">
+                             </form>
                            </td>
                          </tr>
                      @endforeach

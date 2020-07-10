@@ -9,7 +9,6 @@
       <li class="nav-item {{strpos(Request::route()->getName(),'students') !== false ? 'active' : ''}}">
         <a class="nav-link" href="{{route('students.index')}}">Students</a>
       </li>
-
     </ul>
   </div>
 </nav>

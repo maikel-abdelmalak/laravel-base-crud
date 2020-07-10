@@ -7,7 +7,7 @@
 @section('body')
     <div class="container">
         <h1>Inserisci un nuovo studente</h1>
-        <form>
+        <form action="{{route('students.create')}}">
              <div class="form-group">
                 <label for="Matricola" name="freshman">Inserisci Matricola</label>
                 <input type="number" class="form-control" id="Matricola" placeholder="">

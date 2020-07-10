@@ -66,7 +66,6 @@ class StudentController extends Controller
             return view('show', compact('studente'));
         }else{
             abort(404);
-
         }
 
     }
@@ -79,7 +78,12 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $studente = Student::find($id);
+        if($studente){
+            return view('edit', compact('studente'));
+        }else{
+            abort(404);
+        }
     }
 
     /**
@@ -91,7 +95,10 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dati = $request->all();
+        $studente = Student::find($id);
+        $studente->update($dati);
+        return redirect()->route('students.show', [$studente->id]);
     }
 
     /**

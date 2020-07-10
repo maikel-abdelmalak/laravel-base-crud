@@ -35,8 +35,8 @@
                            <td>{{$studente->mail}}</td>
                            <td class="text-right">
                               <a class="btn btn-sm btn-info" href="{{route('students.show', [$studente->id])}}">Dettagli</a>
-                              <a class="btn btn-sm btn-warning" href="{{route('students.create')}}">Modifica</a>
-                              <a class="btn btn-sm btn-danger" href="{{route('students.create')}}">Elimina</a>
+                              <a class="btn btn-sm btn-warning" href="{{route('students.edit',[$studente->id])}}">Modifica</a>
+                              {{-- <a class="btn btn-sm btn-danger" href="{{route('students.edit',[$studente->id])}}">Elimina</a> --}}
                            </td>
                          </tr>
                      @endforeach

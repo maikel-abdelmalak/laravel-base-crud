@@ -1,14 +1,14 @@
 @extends('layouts/layout')
 
 @section('page-name')
-    studente{{$studente->id}}
+    Studente/{{$studente->id}}
 @endsection
 
 @section('body')
     <div class="back">
         <a class="btn btn-default" href="{{route('students.index')}}"><i class="fas fa-arrow-left"></i></a>
     </div>
-    <div class="container">
+    <div class="container pt-0">
         <h1>Dettagli studente ID: {{$studente->id}}</h1>
         <ul>
             <li>Matricola: {{$studente->freshman}}</li>
